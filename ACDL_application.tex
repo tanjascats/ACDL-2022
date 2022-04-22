@@ -1,0 +1,84 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{cleveref}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Ownership Protection in Machine Learning Processes}
+
+\author{\IEEEauthorblockN{Tanja Šarčević}
+\IEEEauthorblockA{\textit{SBA Research} and \textit{Vienna University of Technology} \\
+Vienna, Austria \\
+tsarcevic@sba-research.org \\ 
+0000-0003-0896-9193}
+}
+
+\maketitle
+
+\begin{abstract}
+Outsourcing and shifting data storage and complex Machine Learning models to cloud services witnessed a great growth over the past years, as costs of producing, maintaining and processing data can be decreased this way. 
+However, sharing these assets entails potential intellectual property (IP) theft, and existing mechanisms for IP protection are susceptible to attacks. 
+Our work develops methods for protecting IP privacy on multiple levels of Machine Learning process, i.e. IP protection of shared input data and IP protection of derived Machine Learning models. 
+The research results provide novel schemes for IP protection and better insights on effects of these schemes to quality and utility of the affected intellectual property assets.
+\end{abstract}
+
+\section{Introduction}
+%general
+Sharing digital assets is as old as digital data itself. 
+Data creators are sharing data for commercial reasons, for increasing their reputation for valuable creations or information, for research reasons, to support the preservation of data long-term, etc. 
+And over the last decades, the trend of sharing and processing digital data has vastly increased. 
+Since data is a valuable asset to its owner, any type of unauthorised usage of shared data should be detected and sanctioned.
+With the advances in the area of Machine Learning (ML), outsourcing data and processing thereof became an increasingly popular trend among businesses. 
+In this scope, the data is given to data management professionals that are involved in data mining, data classification etc., to make more use of the data more. 
+This can foster business growth by additional services (recommendation systems) or customer behaviour understanding. 
+In healthcare, for example, medical data are shared with researchers for help in medical diagnosis or other types of services that ML may provide.
+Furthermore, sharing the Machine Learning models has an increasing popularity through the online services such as Machine-Learning-as-a-Service (MLaaS). 
+These platforms facilitate development, especially for researchers and small or medium businesses because in many ML settings, training an effective model from scratch requires a lot of computational power, human expertise and amount of data (e.g. natural language processing, image processing, etc.)  
+In line with this, the model owners that have invested significant resources to train a model consider IP protection methods to verify the ownership or prevent unauthorised usage of a model. 
+
+\textit{Digital watermarking} and \textit{fingerprinting} are approaches for protecting ownership of various types of digital property, including those relevant in ML process - data and ML models. 
+By embedding a mark into a digital object these methods enable the owners to share these objects in their full form while enabling ownership claim and/or tracing recipients.
+Watermarking enables the owner of an object to verify their ownership, while fingerprinting, in addition, allows tracing the source of the unauthorised usage, i.e. the object-receiving party that re-shared the asset without the owner's authorisation. 
+Hence, in case of fingerprinting, a unique mark is created and embedded in the object for every recipient. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/fingerprint-process.png}
+    \caption{Fingerprinting process (applicable to watermarking)}
+    \label{fig:process}
+\end{figure}
+
+There are multiple methods proposed for watermarking and fingerprinting data and ML models, generally adhering to a 2-step process (\Cref{fig:process}): (i) watermark/fingerprint embedding (or insertion) and (ii) watermark/fingerprint detection (or extraction). 
+The requirements for such process are:
+\begin{enumerate}
+    \item recognisable by the owner
+    \item not detectable and consequently removable by the recipients
+    \item robust to the modifications of the object
+    \item utility of the object is preserved
+\end{enumerate}
+To achieve these 4 requirements simultaneously, the techniques need to ensure that the enough marks are embedded to achieve good robustness, but within certain limits to preserve the utility, hence achieving a trade-off between robustness and utility is one of the major challenges in this topic. 
+
+\subsection{Related work}
+% data
+The first watermarking and fingerprinting techniques for data were developed for multimedia content~\cite{} and later extended to other domains such as software~\cite{}, graphs~\cite{}, text~\cite{}, sequential data~\cite{} and relational datasets~\cite{}. 
+Our focus is mostly on the later. 
+Relational data offers additional challenges compared to multimedia data for watermark/fingerprint embedding such as a limited redundancy of data representation for information (mark) hiding and non-uniformity of data content, i.e. a mix of data attribute types (numerical, text, categorical, etc.). 
+% models
+Watermarking methods for ML models is a research topic that gained interest in the last 4 years and most of the techniques are designed specifically for Deep Neural Networks for image classification tasks. 
+
+\section{Preliminary research results}
+
+
+% \begin{thebibliography}{00}
+
+% \end{thebibliography}
+
+\end{document}
